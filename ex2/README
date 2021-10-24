@@ -1,0 +1,27 @@
+elias.2001, volberstan
+Elias Wakileh 324190693, Elchanan Volberstan 206136749
+EX: 2
+
+FILES:
+uthreads.cpp - The library code
+Makefile - The makefile file
+README - This file
+
+REMARKS:
+
+ANSWERS:
+
+Q1:
+User level threads could be used when implementing a virtual ping-pong, when we want to permit two users to control the games and have a fast switch from one player to another in such a way it will seem simultaneous while updating the game screen instantly in the same time we recieve the user's input for the game. User level thread will be a good choice for the implementation because it will permit us to divide heavy computing tasks, for example a player moving his joystick too frequently (which would normally take a respectable amount of time to update its appearance on the screen - which would take cpu time and cause a seeming "lag" for the other player)  between different user level threads with them being coordinated by the programmer choosing their time sharing intervals in such a way to minimise the overhead of frequent context switch thus permitting the game a coordination and a fast response to the input of the users.
+
+Q2:
+Chrome browser will generate a new process for each tab in order for the tabs to run independantly, whereof that a blockation of a process will not forcefully affect other processes. It is possible to acquire this privilege by running the tabs on the same process but dividing them to independant kernel level threads iso tit will be possible for the operatingg system to conduct a context switch with the benefit that even if a thread will encounter a bug, as said earlier, will not affect the other threads. added to that, kernel level threads will allow as well the usage of multi-core processors. The advantages of creating new processes are firstly the fact that a failure in one process will not forcefully lead to failure in other processes. Secondly, every process will have more ressources like memory and stack size. Lastly, a process can generate within it multi-threading thus leading to a faster runtime. Yet, all of this comes at a price; The fact we have more ressources available require us to dedicate for it more ressources added to the fact that a context switch will have more overhead than a thread switch.
+
+
+Q3:
+When we type on the keyboard we send constant interrupts which brings what is being typed to the shell. finally, once the kill command is called, we use the system call kill(). using kill plainly without flags will send a SIGTERM signal which permits the program to sustain its forced termination. The kill command from the shell will invoke the kill() system call which will send a signal to the process in place with its PID from the interruption made by the operating system. The kill command could send a SIGTERM signal (which will defaultly be sent) or a SIGKILL signal.We could choose one of them by sending the kill command with  flag. yet it is noteworthy that sigkill cannot be caught by a process signal handler without any "hesitation" about the process state. Nevertheless, sigterm can be interposed by the process's signal handler which can possibly cause a clean-up operation like saving info to a file. Consequently its use would be more frequent to allow a process handle its forced termination.
+
+Q4:
+Real time is, as its name tells us, the real time that passed since a given time, the same time that passed in our watch since the launch of the timer. On the other hand, virtual time is the time that the process have gotten to run, thus, the timer advances only when the process is running.
+Real time example:When we run tests, the computer uses a real time timer to see how much time did it take to run the tests and it displays the runtime of the test for us.
+Virtual time example: When we wanted in our library to permit a thread to run only for a given amount of time, we used the virtual timer, this was in order to try to give every thread an equal time to run.

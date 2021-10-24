@@ -1,0 +1,14 @@
+elias.2001, volberstan
+Elias Wakileh 324190693, Elhanan Volberstan 206136749
+EX: 3
+
+FILES:
+MapReduceFramework.cpp - main file
+Barrier.cpp - the barrier implementation as is
+Barrier.h - the barrier header file
+Makefile - The makefile file
+README - This file
+
+REMARKS:
+we worked very hard to debug this "job";)
+None

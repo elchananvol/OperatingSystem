@@ -1,0 +1,24 @@
+shimioschwartz, volberstan
+shimon schwartz (201572807), Elhanan volberstan (206136749)
+EX: 1
+
+FILES:
+osm.cpp -- a fsource files for your implementation of the library described in Assignment 2.
+graph.png -- a file with a graph of the measured times.
+makefile  -- as stated in course guidelines.
+
+
+REMARKS:
+no remarks.
+
+ANSWERS:
+
+Q1:
+ התוכנה פותחת תקייה בשם "Welcome" בתוכה פותחת תקייה בשם "To" ובתוכה יוצרת קובץ בשם "OS2021" וכותבת בו
+   shimioschwartz
+   If you haven't read the course guidelines yet --- do it right now!
+   <הפרמטר שניתן לתכנית>
+   אז התוכנה מוחקת את הקובץ ואת שתי התיקיות שיצרה
+
+  נ.ב כפי שניתן להבין התוכנה מצפה לפרמטר כלשהו, ומחזירה שגיאה אם לא קיבלה.
+
